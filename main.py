@@ -175,7 +175,12 @@ def run() -> None:
                     df_export = pd.concat([df_export, last_row_df], ignore_index=True)
             
             # Display the final screened stock data
-            st.dataframe(df_export)
+            if df_export.empty:
+                st.write("No Suitable Tickers")
+            else:
+                st.dataframe(df_export)
+            
+            
             
 if __name__ == '__main__':
     run()
