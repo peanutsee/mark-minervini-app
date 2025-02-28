@@ -100,9 +100,6 @@ def load_ticker_data(ticker: str = "") -> DataFrame:
         # Process moving averages and trends
         df_ticker = _process_ticker(df_ticker)
         
-        # Save data to an Excel file for reference
-        df_ticker.to_excel(f"tmp_files/{ticker}_ticker_data.xlsx")
-        
         return df_ticker
     else:
         raise Exception("No ticker defined.")
