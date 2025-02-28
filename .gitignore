@@ -1,0 +1,7 @@
+pyenv
+tmp_files
+.env
+__pycache__
+*.txt
+output
+dcf
